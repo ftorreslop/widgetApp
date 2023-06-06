@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -80,7 +78,6 @@ class _ButtonsView extends StatelessWidget {
               icon: const Icon(Icons.text_fields),
               label: const Text('Text Icon'),
             ),
-            // TODO: custom button
             IconButton(
               onPressed: () {},
               icon: const Icon(Icons.app_registration),
@@ -113,7 +110,7 @@ class CustomButton extends StatelessWidget {
         color: colors.primary,
         child: InkWell(
           onTap: () {},
-          child: Padding(
+          child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Text('Hola Mundo', style: TextStyle(color: Colors.white)),
           ),

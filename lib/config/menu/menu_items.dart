@@ -62,4 +62,10 @@ const addMenuItems = <MenuItem>[
     link: '/infinite',
     icon: Icons.list_alt_rounded,
   ),
+  MenuItem(
+    title: 'Login',
+    subTitle: 'Pantalla de Login',
+    link: '/login',
+    icon: Icons.login_outlined,
+  ),
 ];

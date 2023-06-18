@@ -33,9 +33,7 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
   @override
   void initState() {
     super.initState();
-    pageviewController.addListener(() {
-      print('$pageviewController.page');
-    });
+    pageviewController.addListener(() {});
   }
 
   @override

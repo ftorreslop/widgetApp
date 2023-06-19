@@ -1,5 +1,3 @@
-import "dart:ui";
-
 import "package:flutter/material.dart";
 
 class LoginScreen extends StatelessWidget {
@@ -20,7 +18,7 @@ class LoginScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 130),
           child: Center(
             child: Card(
-              color: Color(0xffd7f4a2),
+              color: Color(0xffe1dede),
               elevation: 10,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(50),
@@ -40,7 +38,7 @@ class LoginScreen extends StatelessWidget {
                               hintText: 'Email o Usuario',
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(50),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.purple,
                                 ),
                               ),
@@ -69,7 +67,7 @@ class LoginScreen extends StatelessWidget {
                             onPressed: () {},
                             child: const Padding(
                               padding: EdgeInsets.symmetric(
-                                  horizontal: 30, vertical: 10),
+                                  horizontal: 30, vertical: 12),
                               child: Text(
                                 'Acceder',
                                 style: TextStyle(

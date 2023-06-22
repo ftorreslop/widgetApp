@@ -97,7 +97,7 @@ class LoginScreen extends StatelessWidget {
                             child: const Text(
                               '¿No tienes cuenta? Registrate',
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 16,
                               ),
                             ),
                           ),
@@ -106,7 +106,7 @@ class LoginScreen extends StatelessWidget {
                             child: const Text(
                               'He olvidado mi contraseña',
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 16,
                               ),
                             ),
                           ),

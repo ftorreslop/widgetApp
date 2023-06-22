@@ -7,27 +7,41 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double w = MediaQuery.of(context).size.width;
+    double h = MediaQuery.of(context).size.height;
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+        primarySwatch: Colors.deepPurple,
       ),
-      home: Scaffold(
-        backgroundColor: const Color(0xfff2f2bc),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 130),
-          child: Center(
+      home: Stack(children: [
+        Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(
+                  "assets/images/fondo.png"), // Cambia la ruta de la imagen según tu proyecto
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+        Center(
+          child: Padding(
+            padding:
+                EdgeInsets.symmetric(horizontal: w * 0.05, vertical: h * 0.24),
             child: Card(
-              color: Color(0xffe1dede),
+              color: const Color(0xfff6f2f2),
               elevation: 10,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(50),
               ),
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding: EdgeInsets.symmetric(
+                    horizontal: w * 0.1, vertical: h * 0.03),
                 child: Column(
                   children: [
                     Image.asset('assets/images/oficial.png'),
+                    SizedBox(height: h * 0.035),
                     Form(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -39,12 +53,12 @@ class LoginScreen extends StatelessWidget {
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(50),
                                 borderSide: const BorderSide(
-                                  color: Colors.purple,
+                                  color: Colors.deepPurple,
                                 ),
                               ),
                             ),
                           ),
-                          const SizedBox(height: 30),
+                          SizedBox(height: h * 0.02),
                           TextFormField(
                             textAlign: TextAlign.center,
                             decoration: InputDecoration(
@@ -54,7 +68,7 @@ class LoginScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          const SizedBox(height: 30),
+                          SizedBox(height: h * 0.02),
                           ElevatedButton(
                             style: ButtonStyle(
                               shape: MaterialStateProperty.all<
@@ -77,7 +91,7 @@ class LoginScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          const SizedBox(height: 25),
+                          SizedBox(height: h * 0.02),
                           TextButton(
                             onPressed: () {},
                             child: const Text(
@@ -87,7 +101,6 @@ class LoginScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          const SizedBox(height: 20),
                           TextButton(
                             onPressed: () {},
                             child: const Text(
@@ -106,7 +119,7 @@ class LoginScreen extends StatelessWidget {
             ),
           ),
         ),
-      ),
+      ]),
     );
   }
 }

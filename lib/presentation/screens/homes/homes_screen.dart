@@ -110,8 +110,7 @@ class HomesScreen extends StatelessWidget {
                 TextButton(
                   onPressed: () {},
                   style: const ButtonStyle(
-                    backgroundColor:
-                        MaterialStatePropertyAll(Colors.deepPurple),
+                    backgroundColor: MaterialStatePropertyAll(Colors.white),
                   ),
                   child: const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),

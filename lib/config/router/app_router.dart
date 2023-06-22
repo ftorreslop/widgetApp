@@ -3,7 +3,7 @@ import '../../presentation/screens/screens.dart';
 
 // GoRouter configuration
 final appRouter = GoRouter(
-  initialLocation: '/homes',
+  initialLocation: '/',
   routes: [
     GoRoute(
       path: '/',

@@ -1,5 +1,5 @@
-export 'package:widgetsapp/presentation/screens/homes/homes_screen.dart';
-export 'package:widgetsapp/presentation/screens/login/login_screen.dart';
+export 'package:widgetsapp/presentation/screens/theme_changer/theme_changer_screen.dart';
+export 'package:widgetsapp/presentation/screens/counter/counter_screen.dart';
 export 'package:widgetsapp/presentation/screens/animated/animated_screen.dart';
 export 'package:widgetsapp/presentation/screens/app_tutorial/app_tutorial_screen.dart';
 export 'package:widgetsapp/presentation/screens/buttons/button_screen.dart';

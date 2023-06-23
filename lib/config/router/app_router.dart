@@ -51,14 +51,14 @@ final appRouter = GoRouter(
       builder: (context, state) => const InfiniteScrollScreen(),
     ),
     GoRoute(
-      path: '/login',
-      name: LoginScreen.name,
-      builder: (context, state) => const LoginScreen(),
+      path: '/counter',
+      name: CounterScreen.name,
+      builder: (context, state) => const CounterScreen(),
     ),
     GoRoute(
-      path: '/homes',
-      name: HomesScreen.name,
-      builder: (context, state) => const HomesScreen(),
+      path: '/theme-changer',
+      name: ThemeChangerScreen.name,
+      builder: (context, state) => const ThemeChangerScreen(),
     ),
   ],
 );

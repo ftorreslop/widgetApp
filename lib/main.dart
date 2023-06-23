@@ -1,38 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:widgetsapp/config/router/app_router.dart';
 import 'package:widgetsapp/config/theme/app_theme.dart';
+import 'package:widgetsapp/presentation/providers/theme_provider.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(const ProviderScope(child: MyApp()));
+}
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ref) {
+    final int selectedColor = ref.watch(selectedColorProvider);
+    final bool isDarkMode = ref.watch(isDarkModeProvider);
+
     return MaterialApp.router(
       routerConfig: appRouter,
       debugShowCheckedModeBanner: false,
-      theme: AppTheme(selectedColor: 0).getTheme(),
+      theme: AppTheme(selectedColor: selectedColor, isDarkMode: isDarkMode)
+          .getTheme(),
       title: 'Flutter Widgets',
     );
   }
 }
-
-// class MyHomePage extends StatelessWidget {
-//   final String title;
-//   const MyHomePage({super.key, required this.title});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         // The title text which will be shown on the action bar
-//         title: Text(title),
-//       ),
-//       body: Center(
-//           child: FilledButton(
-//         child: const Text('Hola'),
-//         onPressed: () {},
-//       )),
-//     );
-//   }
-// }
